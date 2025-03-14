@@ -1,0 +1,19 @@
+{
+  "name": "iframe-click-away",
+  "version": "1.0.0",
+  "description": "click away between inner iframe and outer window",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
