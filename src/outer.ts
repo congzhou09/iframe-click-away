@@ -1,22 +1,22 @@
 import { INTER_MSG } from "./constant";
 
 export class Outer {
+  private clickEventMap = new WeakMap();
   constructor(
-    private readonly clickEventMap = new WeakMap(),
     private readonly innerWindow: Window,
     private readonly outerWindow: Window
   ) {}
 
-  private onOuterClick(e: MouseEvent) {
+  private onOuterClick = (e: MouseEvent) => {
     if (!this.clickEventMap.has(e) && this.innerWindow) {
       console.debug("outer click");
       this.innerWindow.postMessage({ message: INTER_MSG.outerClick }, "*");
     } else {
       console.debug("outer click from inner msg");
     }
-  }
+  };
 
-  private onInnerClickMsg(e: MessageEvent) {
+  private onInnerClickMsg = (e: MessageEvent) => {
     if (e.data.message === INTER_MSG.innerClick) {
       console.debug("get innerClick msg");
       const element = this.outerWindow.document.elementFromPoint(2, 2);
@@ -32,7 +32,7 @@ export class Outer {
         element?.dispatchEvent(event);
       });
     }
-  }
+  };
 
   init() {
     this.outerWindow.document.addEventListener(
