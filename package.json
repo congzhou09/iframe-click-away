@@ -7,12 +7,13 @@
     "iframe"
   ],
   "description": "click away between inner iframe and outer window",
-  "main": "dist/index.js",
-  "types": "dist/types/index.d.ts",
-  "module": "dist/index.js",
+  "types": "types/index.d.ts",
+  "module": "es/index.js",
   "files": [
-    "dist",
-    "README.md"
+    "es",
+    "types",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc"
