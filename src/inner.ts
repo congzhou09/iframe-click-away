@@ -22,7 +22,10 @@ export class Inner {
   private onOuterClickMsg = (e: MessageEvent) => {
     if (e.data.message === INTER_MSG.outerClick) {
       log("get outerClick msg");
-      const element = this.innerWindow.document.elementFromPoint(2, 2);
+      const element = this.innerWindow.document.elementFromPoint(
+        this.clientX,
+        this.clientY
+      );
       const events = ["mousedown", "mouseup", "click"];
       events.forEach((eventType) => {
         const event = new MouseEvent(eventType, {
