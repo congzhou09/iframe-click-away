@@ -1,20 +1,27 @@
 {
   "name": "iframe-click-away",
   "version": "1.0.0-beta",
+  "homepage": "https://github.com/congzhou09/iframe-click-away",
+  "keywords": [
+    "click away",
+    "iframe"
+  ],
   "description": "click away between inner iframe and outer window",
-  "main": "dist/index.js",
-  "types": "dist/types/index.d.ts",
-  "module": "dist/index.js",
+  "types": "types/index.d.ts",
+  "module": "es/index.js",
   "files": [
-    "dist"
+    "es",
+    "types",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc",
     "playground": "vite ./tests/playground",
     "test": "playwright test"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "yuancongzhou",
+  "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.51.0",
     "@types/node": "^22.13.10",

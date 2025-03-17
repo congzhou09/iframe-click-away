@@ -1,4 +1,5 @@
-dist
+es
+types
 node_modules
 
 # Playwright
