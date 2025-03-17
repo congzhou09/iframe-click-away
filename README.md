@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/iframe-click-away.svg)](https://badge.fury.io/js/iframe-click-away)
+
 ## iframe-click-away
 
 ◇ Most tooltip and popup tools has a "click away" feature, which allows users to close a tooltip, popup, or modal by clicking anywhere outside of it.
