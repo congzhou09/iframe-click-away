@@ -12,7 +12,7 @@ const Interior = () => {
     let inner: Inner;
     const hasParentWindow = window.parent !== window;
     if (hasParentWindow) {
-      inner = new Inner(window, window.parent);
+      inner = new Inner(window, window.parent, 5, 1);
       inner.init();
     }
 

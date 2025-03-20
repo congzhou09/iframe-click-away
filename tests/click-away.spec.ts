@@ -1,23 +1,4 @@
 import { test, expect } from "@playwright/test";
-import { exec, ChildProcess } from "child_process";
-
-let viteProcess: ChildProcess;
-test.beforeAll(async () => {
-  viteProcess = exec("vite ./playground", (err, stdout, stderr) => {
-    if (err) {
-      console.error(`Error starting Vite: ${err}`);
-      return;
-    }
-    console.log(stdout);
-    console.error(stderr);
-  });
-});
-
-test.afterAll(() => {
-  if (viteProcess) {
-    viteProcess.kill();
-  }
-});
 
 test.beforeEach(async ({ page }) => {
   await page.goto("http://localhost:2025");
@@ -35,7 +16,7 @@ test.describe("click away", () => {
       if (msg.type() === "log") {
         const logMsg = msg.text();
         if (logMsg.startsWith("interior click")) {
-          if (logMsg.match(/.+\(2, 2\)$/)) {
+          if (logMsg.match(/.+\(5, 1\)$/)) {
             innerLogCorrect = true;
           }
         }

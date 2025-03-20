@@ -4,7 +4,8 @@
   "homepage": "https://github.com/congzhou09/iframe-click-away",
   "keywords": [
     "click away",
-    "iframe"
+    "iframe",
+    "iframe click away"
   ],
   "description": "click away between inner iframe and outer window",
   "types": "types/index.d.ts",
@@ -18,7 +19,8 @@
   "scripts": {
     "build": "tsc",
     "playground": "vite ./tests/playground",
-    "test": "playwright test"
+    "test": "playwright test",
+    "postinstall": "playwright install chromium"
   },
   "author": "yuancongzhou",
   "license": "MIT",
